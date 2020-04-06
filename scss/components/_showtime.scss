@@ -1,0 +1,141 @@
+.showtime{
+    padding: 80px 0px;
+}
+   
+.showtime .nav-pills .nav-link{
+    color: #4a4a4a;
+    background-color: white;
+    font-size: 20px;
+}
+
+.showtime .nav-pills{
+    border-bottom: 2px solid rgba(128, 128, 128, 0.16);
+    margin: 50px 0px;
+    position: $pos1;
+}
+
+.nav-item{
+    position: $pos1;
+}
+
+.showtime .nav-item::after{
+    position: $pos2;
+    content: "";
+    display: block;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, $color1, $color2); 
+    width: 0%;
+    height: 3px;
+    transition: all 0.8s;
+}
+
+.nav-item.active::after,.nav-item:hover::after{
+    width: 100%;
+}
+/*---------------------------------------*/
+.movie_item{
+    position: $pos1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.movie_overlay{
+    position: absolute;
+    background:linear-gradient(to bottom, rgb(54, 53, 53), rgb(19, 17, 17));
+    width: 800px;
+    height: 100%;
+    top:0;
+    transform: skewX(45deg);
+    left:-400%;
+    transition: all 0.5s;
+    opacity: 0.8;
+}
+
+.movie_item:hover .movie_overlay{
+    left: -100%;
+}
+
+.movie_detail{
+    position: absolute;
+    top:50%;
+    opacity: 0;
+    transform: scale(0.8);
+    left:0;
+    transition: all 0.3s;
+    transform: translateY(-100px);
+}
+
+.movie_item:hover .movie_detail{
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(-100px);
+}
+.movie_detail a{
+    font-size:14px;
+    letter-spacing: 2px;
+}
+.movie_detail span{
+    font-size:16px;
+}
+.movie_name{
+    font-size:15px;
+}
+.movie_star{
+    color:#fbbd61;
+}
+
+.movie_detail i {
+    color: white;
+    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    padding: 42px 0px;
+    border-radius: 50%;
+}
+
+.d-block.text-white.mb-2 {
+    font-size: 13px;
+    cursor: pointer;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+ 
+}
+
+.movie_detail .video-play:hover{
+    transform: scale(0.9);
+}
+
+.tab-content  .row .img-fluid {
+    border-radius: 10px;
+}
+
+.d-block.text-white.mb-2 {
+    text-decoration: none;
+}
+
+.movie_hover{
+    position: relative;
+    .show_hover{
+        position: absolute;
+        top: 0px;
+        background-color: black;
+        width: 100%;
+        height: 45%;
+        border-radius: 20px;
+        opacity: 0;
+        a{
+            color: $color-white;
+            text-decoration: none;
+            &:hover{
+                color: $color-yellow;
+            }
+        }
+    }
+    &:hover .show_hover{
+        opacity: 1;
+        transition: 0.2s;
+    }
+}
+
+

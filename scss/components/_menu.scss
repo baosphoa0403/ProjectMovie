@@ -1,0 +1,108 @@
+.menu{
+    position: fixed;
+    z-index: 999;
+    .navbar{
+        background-color: #000000!important;
+        .logo{
+            img{
+                width: 100%;
+            }
+        }
+        .sign-language{
+            text-align: left;
+            color: $color-white;
+            margin: 15px 0px;
+            ul{
+                li{
+                    list-style: none;
+                    a{
+                    text-decoration: none; 
+                    color: $color-white;
+                    &:hover{
+                        color: $color-yellow;
+                    }
+                    }
+                    i{
+                    margin: 0px 5px;
+                    border: 1px solid white;
+                    width: 30px;
+                    height: 30px;
+                    padding: 4px 8px;
+                    border-radius: 50%;
+                    &:hover{
+                    color: $color-yellow;
+                    border: 1px solid $color-yellow;
+                    }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    @include menu();
+    .nav-item.dropdown{
+        &:hover .dropdown-menu.menu-movie{
+            display: block;
+        }
+    }
+    .nav-item{
+        font-size: 13px;
+    }
+    
+    .nav-item.dropdown{
+        &:hover .dropdown-menu{
+            display: block;
+        }
+        .dropdown-menu{
+            a{
+                margin: 10px 0px;
+            }
+        }
+    }
+   
+    .dropdown-menu{
+        display: none;
+    }
+    .dropdown-menu.menu-movie{
+        display: none;
+        width: 1040px;
+        height: 514px;
+        a{
+            color: $color-white;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            &:hover{
+                color: $color-yellow;
+            }
+        }
+        a::after{
+            display: block;
+            width: 125px;
+            height: 2px;
+            margin-top: 8px;
+            content: '';
+            background-color: $color-yellow;
+        }
+        .movie {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 138px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @include movie();
+            a::after{
+                display: block;
+                width: 50px;
+                height: 2px;
+                margin-top: 8px;
+                content: none;
+                background-color: $color-yellow;
+            }
+        }
+    }
+}
