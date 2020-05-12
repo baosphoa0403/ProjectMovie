@@ -127,8 +127,6 @@ header .header-right {
     display: block; }
   .menu .nav-item.dropdown .dropdown-menu a {
     margin: 10px 0px; }
-  .menu .nav-item.dropdown .nav-link {
-    margin: 0px 10px; }
   .menu .dropdown-menu {
     display: none; }
   .menu .dropdown-menu.menu-movie {
